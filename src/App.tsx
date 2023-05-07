@@ -1,8 +1,9 @@
-import { useState } from 'react'
+import React, { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
 import { ThemeContext } from './contexts/theme-context'
+import Header from './layout/header.tsx';
 
 function App() {
   const [count, setCount] = useState(0)
@@ -11,6 +12,8 @@ function App() {
   return (
     <ThemeContext.Provider value={{ theme, setTheme }}>
       <div className={`theme-${theme}`}>
+        <Header />
+
         {/*<Layout>*/}
           <div>
             <a href="https://vitejs.dev" target="_blank">
